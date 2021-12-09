@@ -1,48 +1,38 @@
 <template>
     <!--header-->
-    <header id="site-header" class="fixed-top">
+    <header id="site-header" :class="navBarFixed ? 'fixed-top nav-fixed'  : 'fixed-top'">
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke px-0">
                 <h1>
-                    <a class="navbar-brand" href="index.html">
-                        <i class="fab fa-accusoft icon-color mr-1"></i>Set<span>up</span>
-                    </a>
+                    <router-link class="navbar-brand" to="/">
+                        <i class="fab fa-accusoft icon-color mr-1"></i>Mystical<span> Vigyan</span>
+                    </router-link>
                 </h1>
-                <!-- if logo is image enable this   
-    <a class="navbar-brand" href="#index.html">
-        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-    </a> -->
-                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
-                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button :class="isMenuExpand ? 'navbar-toggler  bg-gradient' :  'navbar-toggler  bg-gradient collapsed'" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" :aria-expanded="isMenuExpand"
+                    aria-label="Toggle navigation"
+                    @click="navBarExpand">
                     <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
                     <span class="navbar-toggler-icon fa icon-close fa-times"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <div :class="isMenuExpand ? 'collapse navbar-collapse show' : 'collapse navbar-collapse'" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        <li class="nav-item">
+                            <router-link :class="$route.path == '/' ? 'nav-link active' : 'nav-link'" to="/">Home</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <router-link :class="$route.path == '/about' ? 'nav-link active' : 'nav-link'" to="/about">About Us</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                            <router-link :class="$route.path == '/numerology' ? 'nav-link active' : 'nav-link'" to="/numerology">Numerology</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <router-link :class="$route.path == '/nameology' ? 'nav-link active' : 'nav-link'" to="/nameology">Nameology</router-link>
                         </li>
-                        <!-- search button -->
-                        <div class="search-right ml-lg-3">
-                            <form action="#search" method="GET" class="search-box position-relative">
-                                <input type="search" placeholder="Enter Keyword" name="search" required="required"
-                                    autofocus="" class="search-popup">
-                                <button type="submit" class="btn search-btn"><i class="fa fa-search"
-                                        aria-hidden="true"></i></button>
-                            </form>
-                        </div>
-                        <!-- //search button -->
+                        <li class="nav-item">
+                            <router-link :class="$route.path == '/contact' ? 'nav-link active' : 'nav-link'" to="/contact">Contact Us</router-link>
+                        </li>
                     </ul>
                 </div>
                 <!-- //search button -->
@@ -50,7 +40,7 @@
                 <div class="cont-ser-position">
                     <nav class="navigation">
                         <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox">
+                            <label class="theme-switch" for="checkbox" @click="switchTheme($event)">
                                 <input type="checkbox" id="checkbox">
                                 <div class="mode-container">
                                     <i class="gg-sun"></i>
@@ -66,3 +56,62 @@
     </header>
     <!--//header-->
 </template>
+<script>
+export default {
+    data() {
+        return {
+            isMenuExpand: false,
+            navBarFixed: false,
+        }
+    },
+    mounted() {
+        this.themeChange();
+        window.addEventListener('scroll', this.navBarWhileScroll);
+    },
+    methods: {
+        navBarExpand() {
+            if(this.isMenuExpand) {
+                this.isMenuExpand = false;
+            } else {
+                this.isMenuExpand = true;
+            }
+        },
+        themeChange() {
+            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+            const currentTheme = localStorage.getItem('theme');
+
+            if (currentTheme) {
+                document.documentElement.setAttribute('data-theme', currentTheme);
+                if (currentTheme === 'dark') {
+                    toggleSwitch.checked = true;
+                }
+            }
+        },
+        switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            else {        document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        },
+        navBarWhileScroll() {
+            if (document.body.scrollTop >= 10 || document.documentElement.scrollTop > 10) {
+                this.navBarFixed = true;
+            } else {
+                this.navBarFixed = false;
+            }
+      }
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.navBarWhileScroll);
+    },
+    // watch:{
+    //     $route (){
+    //         console.log('route change..')
+    //         console.log("route", this.$route.path)
+    //     }
+    // }
+}
+</script>

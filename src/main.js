@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router';
 
 import './assets/css/style-starter.css'
+import './assets/css/fontawesome-all.min.css'
 
 import HeaderFooter from './layouts/HeaderFooter.vue';
 

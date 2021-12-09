@@ -6,63 +6,29 @@
                 <div class="row footer-p">
                     <div class="col-lg-8 mt-lg-0 mt-4 pr-lg-5">
                         <div class="d-sm-flex align-items-center top-footer-content mb-5">
-                            <a class="logo d-flex align-items-center" href="index.html"><i
-                                    class="fab fa-accusoft icon-color mr-1"></i>Set<span>up</span></a>
-                            <p class="top-p ml-sm-4 pl-sm-4 mt-sm-0 mt-2">Duis imperdiet sapien tortor, vitae congue
-                                diam auctor vitae.
-                                Aliquam
-                                eget turpis ornare, euismod ligul aeget, enenatis dui. </p>
+                            <a class="logo d-flex align-items-center" href="/"><i
+                                    class="fab fa-accusoft icon-color mr-1"></i>Mystical<span> Vigyan</span></a>
+                            <p class="top-p ml-sm-4 pl-sm-4 mt-sm-0 mt-2">
+                                Numerology is a science of numbers, which play significant role in our lives.
+                            </p>
                         </div>
                         <div class="row footer-grids pt-4">
                             <div class="col-sm-4 col-6 column">
                                 <ul class="footer-gd-16">
-                                    <li><a href="index.html"><i class="fa fa-angle-right"
-                                                aria-hidden="true"></i>Home</a></li>
-                                    <li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About
-                                            Us</a></li>
-                                    <li><a href="#services"><i class="fa fa-angle-right"
-                                                aria-hidden="true"></i>Services</a></li>
-                                    <li><a href="#blog"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog
-                                            Posts</a></li>
-                                    <li><a href="contact.html"><i class="fa fa-angle-right"
-                                                aria-hidden="true"></i>Contact Us</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-4 col-6 column pl-sm-0">
-                                <ul class="footer-gd-16">
-                                    <li><a href="#marketplace"><i class="fa fa-angle-right"
-                                                aria-hidden="true"></i>Marketplace</a></li>
-                                    <li><a href="#experts"><i class="fa fa-angle-right" aria-hidden="true"></i>Our
-                                            Experts</a></li>
-                                    <li><a href="#customers"><i class="fa fa-angle-right"
-                                                aria-hidden="true"></i>Customers</a></li>
-                                    <li><a href="#platform"><i class="fa fa-angle-right"
-                                                aria-hidden="true"></i>Platform</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-4 col-6 column pl-sm-0">
-                                <ul class="footer-gd-16">
-                                    <li><a href="#support"><i class="fa fa-angle-right"
-                                                aria-hidden="true"></i>Support</a></li>
-                                    <li><a href="#privacy"><i class="fa fa-angle-right" aria-hidden="true"></i>Privacy
-                                            Policy</a></li>
-                                    <li><a href="#terms"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms &
-                                            conditions</a></li>
-                                    <li><a href="#faq"><i class="fa fa-angle-right" aria-hidden="true"></i>FAQ</a></li>
+                                    <li><router-link to="/"><i class="fa fa-angle-right"
+                                                aria-hidden="true"></i>Home</router-link></li>
+                                    <li><router-link to="/about"><i class="fa fa-angle-right" aria-hidden="true"></i>About
+                                            Us</router-link></li>
+                                    <!-- <li><router-link to="#blog"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog
+                                            Posts</router-link></li> -->
+                                    <li><router-link to="/contact"><i class="fa fa-angle-right"
+                                                aria-hidden="true"></i>Contact Us</router-link></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-7 column mt-lg-0 mt-4">
-                        <h3>Newsletter </h3>
-                        <div class="end-column">
-                            <form action="#" class="subscribe" method="post">
-                                <input type="email" name="email" placeholder="Email Address" required="">
-                                <button class="button-style"><span class="fa fa-paper-plane"
-                                        aria-hidden="true"></span></button>
-                            </form>
-                            <p>Subscribe to our mailing list and get updates to your email inbox.</p>
-                        </div>
+                        <h3>Social Links </h3>
                         <div class="columns-2 mt-4">
                             <ul class="social">
                                 <li><a href="#facebook"><span class="fab fa-facebook-f" aria-hidden="true"></span></a>
@@ -81,13 +47,50 @@
                     </div>
                 </div>
                 <div class="below-section mt-5 text-center">
-                    <p class="copy-text">@ 2021 Setup. All rights reserved. Design by <a href="https://w3layouts.com/"
+                    <p class="copy-text">@ 2021 Setup. All rights reserved. Design by <a href="https://vajratechne.com/"
                             target="_blank">
-                            W3Layouts</a>
+                            VajraTechne</a>
                     </p>
                 </div>
             </div>
         </div>
+        <button @click="topFunction()" id="movetop" title="Go to top" v-if="isGoToTop">
+            <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+        </button>
     </footer>
     <!-- //footer -->
 </template>
+<script>
+export default {
+    data() {
+        return {
+            isGoToTop: false
+        }
+    },
+    mounted(){
+        window.addEventListener('scroll', this.scrollFunction);
+    },
+
+    destroyed () {
+        window.removeEventListener('scroll', this.scrollFunction);
+    },
+
+    methods:{
+        scrollFunction(){
+        if (document.body.scrollTop >= 20 || document.documentElement.scrollTop > 20) {
+        //   document.getElementById("movetop").style.display = "block";
+            this.isGoToTop = true;
+        } else {
+        //   document.getElementById("movetop").style.display = "none";
+         this.isGoToTop = false;
+        }
+      },
+
+      // When the user clicks on the button, scroll to the top of the document
+      topFunction: function(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    }
+}
+</script>

@@ -3,9 +3,9 @@ import Router from 'vue-router';
 
 import HomePage from '@/pages/HomePage';
 import About from '@/pages/About';
-import Services from '@/pages/Services';
+import Numerology from '@/pages/Numerology';
 import Contact from '@/pages/Contact';
-import Clients from '@/pages/Clients';
+import Nameology from '@/pages/Nameology';
 
 Vue.use(Router);
 
@@ -18,24 +18,24 @@ export default new Router({
             component: HomePage,
         },
         {
-            path:'/About',
+            path:'/about',
             name: 'About',
             component: About
         },
         {
-            path:'/Services',
-            name: 'Services',
-            component: Services
+            path:'/numerology',
+            name: 'Numerology',
+            component: Numerology
         },
         {
-            path:'/Contact',
+            path:'/contact',
             name: 'Contact',
             component: Contact
         },
         {
-            path:'/Clients',
-            name: 'Clients',
-            component: Clients
-        }
+            path:'/nameology',
+            name: 'Nameology',
+            component: Nameology
+        },
     ]
 })
