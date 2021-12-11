@@ -13,20 +13,6 @@
     </div>
     <!-- //inner banner -->
 
-    <section class="w3l-content-about py-5">
-        <div class="container py-md-5 py-4">
-            <img src="./../assets/images/num.jpg" alt="" class="img-fluid radius-image-full">
-            <div class="row mt-sm-5 mt-4">
-                <div class="col-lg-12 about-left-inner pr-lg-5" style="text-align: center;">
-                    <!-- <h3 class="title-main-2 font-weight-bold">Dhanashryee Bramhankarr</h3> -->
-                </div>
-                <!-- <div class="col-lg-6 about-right-inner mt-lg-0 mt-4">
-                    <p></p>
-                </div> -->
-            </div>
-        </div>
-    </section>
-
     <section class="w3l-content-4 py-5" id="features">
         <div class="container py-md-5 py-4">
             <div class="row">
@@ -40,10 +26,27 @@
                     </p>
                 </div>
                 <div class="content-right col-lg-6 pl-lg-4 mt-lg-0 mt-md-5 mt-5 align-self">
+                    <div class="position-relative">
+                            <img src="./../assets/images/team1.jpg" class="img-responsive" style="max-width: 75%;margin: auto;" alt="content-photo">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w3l-content-4 py-5" id="features">
+        <div class="container py-md-5 py-4">
+            <div class="row">
+                <div class="content-left col-lg-6">
+                    <div class="position-relative">
+                            <img src="./../assets/images/team3.jpg" class="img-responsive" style="max-width: 75%;margin: auto;" alt="content-photo">
+                        </div>
+                </div>
+                <div class="content-right col-lg-6 pl-lg-4 mt-lg-0 mt-md-5 mt-5 align-self">
                     <div class="row content4-right-grids mb-lg-5 mb-5">
                         <div class="col-2 content4-right-icon">
                             <div class="content4-icon">
-                                <span class="fas fa-link icon-color"></span>
+                                <span class="fas fa-circle icon-color"></span>
                             </div>
                         </div>
                         <div class="col-10 content4-right-info">
@@ -63,7 +66,7 @@
                     <div class="row content4-right-grids mb-lg-5 mb-5">
                         <div class="col-2 content4-right-icon">
                             <div class="content4-icon">
-                                <span class="fa fa-link icon-color"></span>
+                                <span class="fas fa-circle icon-color"></span>
                             </div>
                         </div>
                         <div class="col-10 content4-right-info">
@@ -75,7 +78,7 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="row content4-right-grids">
+                    <!-- <div class="row content4-right-grids">
                         <div class="col-2 content4-right-icon">
                             <div class="content4-icon">
                                 <span class="fa fa-link icon-color"></span>
@@ -88,7 +91,7 @@
                                 </a>
                             </h6>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

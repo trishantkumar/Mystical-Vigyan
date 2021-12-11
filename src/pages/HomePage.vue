@@ -29,8 +29,8 @@
     <div class="w3l-content-photo-5 py-5">
         <div class="container py-lg-5 py-4">
             <div class="row align-items-center">
-                <div class="col-md-6 content-photo order-md-first order-last">
-                    <a href="#image"><img src="./../assets/images/786.jpg" class="img-fluid" alt="content-photo"></a>
+                <div class="col-md-6 content-photo order-md-first order-last" style="text-align:center;">
+                    <a href="#image"><img src="./../assets/images/team2.jpg" class="img-fluid" style="max-width: 75%; border-radius: 10px;" alt="content-photo"></a>
                 </div>
                 <div class="col-md-6 content-left mb-md-0 mb-5 pl-lg-5 order-md-last order-first">
                     <h3 class="mb-3">WHAT IS OCCULT SCIENCE ?</h3>
@@ -70,7 +70,7 @@
                         It is often associated with the paranormal, alongside astrology and similar to divinatory arts.
                     </p>
                 </div>
-                <div class="row justify-content-center pt-lg-2">
+                <!-- <div class="row justify-content-center pt-lg-2">
                     <div class="col-md-4 col-sm-6">
                         <div class="position-relative">
                             <img src="./../assets/images/team1.jpg" class="img-responsive" alt="content-photo">
@@ -86,7 +86,7 @@
                             <img src="./../assets/images/team2.jpg" class="img-responsive" alt="content-photo">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

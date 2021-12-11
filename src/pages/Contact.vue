@@ -30,11 +30,13 @@
                                     <span class="fa fa-globe icon-color"></span>
                                 </div>
                                 <div class="cont-right">
-                                    <h6>Company Address</h6>
-                                    <p>10001, 5th Avenue, 12202 street, USA.</p>
+                                    <h6>Address</h6>
+                                    <p>
+                                        Plot no. 38, Flat no. 001, Siddhivinayak Balaji palace 2, New Subhedar road, Ayodhya nagar, Nagpur - 440024
+                                    </p>
                                 </div>
                             </div>
-                            <div class="d-flex contact-grid mt-4 pt-lg-2">
+                            <!-- <div class="d-flex contact-grid mt-4 pt-lg-2">
                                 <div class="cont-left text-center mr-3">
                                     <span class="fa fa-phone icon-color"></span>
                                 </div>
@@ -60,7 +62,7 @@
                                     <h6>Customer Support</h6>
                                     <p><a href="mailto:info@support.com" class="mail">info@support.com</a></p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-md-7 contact-right mt-md-0 mt-4">
@@ -89,8 +91,8 @@
     <!-- map -->
     <div class="map-iframe">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
-            width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.923193427472!2d79.11046301493408!3d21.1156280859514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe592a05d4a250888!2zMjHCsDA2JzU2LjMiTiA3OcKwMDYnNDUuNiJF!5e0!3m2!1sen!2sin!4v1639214461998!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
     </div>
     </div>
 </template>
