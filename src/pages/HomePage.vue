@@ -9,7 +9,7 @@
             <div class="container pt-5 pb-md-4">
                 <div class="row align-items-center">
                     <div class="col-md-6 pt-md-0 pt-4">
-                        <h3 class="mb-lg-4 mb-3 title">We Are <span class="typed-text"></span><span
+                        <h3 class="mb-lg-4 mb-3 title">We Are <span>Numerologist's</span><span
                                 class="cursor">&nbsp;</span></h3>
                         <p>Numerology is a science of numbers, which play significant role in our lives.</p>
                         <div class="mt-md-5 mt-4 mb-lg-0 mb-4">
