@@ -37,7 +37,7 @@
                 </div>
                 <!-- //search button -->
                 <!-- toggle switch for light and dark theme -->
-                <div class="cont-ser-position">
+                <!-- <div class="cont-ser-position">
                     <nav class="navigation">
                         <div class="theme-switch-wrapper">
                             <label class="theme-switch" for="checkbox" @click="switchTheme($event)">
@@ -49,7 +49,7 @@
                             </label>
                         </div>
                     </nav>
-                </div>
+                </div> -->
                 <!-- //toggle switch for light and dark theme -->
             </nav>
         </div>

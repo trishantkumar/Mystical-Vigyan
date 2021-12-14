@@ -96,6 +96,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  /* text-shadow: 2px 2px #FF0000; */
 }
 
 p {
@@ -10985,9 +10986,9 @@ a.text-dark:focus {
   --primary-light: #fcf1e7;
   --primary-dark: #AF0202;
   --secondary-color: #F31414;
-  --font-color: #707070;
-  --bg-color: #fff;
-  --heading-color: #060606;
+  --font-color: white;
+  --bg-color: #BB0A1E;
+  --heading-color: white;
   --footer-color: #161623;
   --border-radius: 30px;
   --border-radius-full: 15px;
@@ -11000,7 +11001,7 @@ a.text-dark:focus {
   --header-border-color: rgb(255 255 255 / 39%);
   --serach-shadow: rgb(0 0 0 / 5%);
   --text-color: #fff;
-  --clients-bgimg: url(../images/bg2.png) no-repeat bottom;
+  --clients-bgimg: url(../images/bg2-dark.png) no-repeat bottom;
 }
 
 [data-theme="dark"] {
@@ -11895,7 +11896,7 @@ a.navbar-brand:hover,
 .navbar-expand-lg .navbar-nav .nav-link.show,
 .navbar-expand-lg .navbar-nav .nav-link.active,
 .navbar-expand-lg .navbar-nav .nav-link:hover {
-  color: var(--primary-color);
+  color: red;
 }
 
 .navbar-light .navbar-nav .show>.nav-link,
@@ -12036,11 +12037,11 @@ nav ul li a:hover {
 }
 
 .nav-fixed .navbar-expand-lg .navbar-nav li.nav-item.active .nav-link {
-  color: var(--primary-color);
+  color: red;
 }
 
 .nav-fixed .navbar-expand-lg .navbar-nav li.nav-item .nav-link:hover {
-  color: var(--primary-color);
+  color: red;
 }
 
 .nav-fixed .navbar-expand-lg .navbar-brand span.fa {
@@ -12312,7 +12313,7 @@ button.search-btn:hover {
 /*-- //button style --*/
 
 .icon-color {
-  background: linear-gradient(75deg, #AF0202 10%, #F31414);
+  background: linear-gradient(75deg, white 10%, white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -12340,7 +12341,7 @@ h3.title-main {
 .w3l-banner .banner-image {
   position: absolute;
   overflow: hidden;
-  background-image: url(../images/banner.png);
+  /* background-image: url(../images/banner.png); */
   background-size: cover;
   background-position: center;
   top: 0;
@@ -12534,8 +12535,8 @@ p.sub-para-style {
 }
 
 label.sub-title {
-  border-bottom: 1px solid var(--primary-color);
-  color: var(--primary-color);
+  border-bottom: 1px solid white;
+  color: white;
   padding: 8px;
   font-size: 13px;
   margin-bottom: 15px;
@@ -13505,7 +13506,7 @@ p.top-p {
 }
 
 .w3l-footer-16 p.copy-text a:hover {
-  color: var(--primary-color);
+  color: red;
 }
 
 .w3l-footer-16 .footer-gd-16 li a i {
@@ -13562,7 +13563,7 @@ p.top-p {
 }
 
 .w3l-footer-16 ul.social li a {
-  color: var(--heading-color);
+  color: red;
   width: 35px;
   height: 35px;
   background: var(--bg-grey);
@@ -13645,7 +13646,7 @@ p.top-p {
 
 /* inner-banner */
 .inner-banner {
-  background: url(../images/banner.png) no-repeat;
+  /* background: url(../images/banner.png) no-repeat; */
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -13728,11 +13729,11 @@ p.top-p {
 
 .contact-block input:focus,
 .contact-block textarea:focus {
-  border: 1px solid var(--primary-color);
+  border: 1px solid red;
 }
 
 .cont-details p a:hover {
-  color: var(--primary-color);
+  color: red;
 }
 
 .cont-details h6 {

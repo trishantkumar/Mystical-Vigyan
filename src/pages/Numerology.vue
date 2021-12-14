@@ -13,7 +13,7 @@
     </div>
     <!-- //inner banner -->
 
-    <section class="w3l-content-4 py-5" id="features">
+    <section class="w3l-content-4 py-5" id="features" style="background: none">
         <div class="container py-md-5 py-4">
             <div class="row">
                 <div class="content-left col-lg-6">
@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <section class="w3l-content-4 py-5" id="features">
+    <section class="w3l-content-4 py-5" id="features" style="background: none">
         <div class="container py-md-5 py-4">
             <div class="row">
                 <div class="content-left col-lg-6">
