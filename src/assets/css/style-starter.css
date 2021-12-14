@@ -12341,7 +12341,7 @@ h3.title-main {
 .w3l-banner .banner-image {
   position: absolute;
   overflow: hidden;
-  /* background-image: url(../images/banner.png); */
+  background-image: url(../images/banner.png);
   background-size: cover;
   background-position: center;
   top: 0;
@@ -13646,7 +13646,7 @@ p.top-p {
 
 /* inner-banner */
 .inner-banner {
-  /* background: url(../images/banner.png) no-repeat; */
+  background: url(../images/banner.png) no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
